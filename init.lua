@@ -78,16 +78,31 @@ require("lazy").setup({
     -- LSP MASON
 
     {
-        "mason-org/mason.nvim",
+    "mason-org/mason.nvim",
         opts = {
             ui = {
                 icons = {
                     package_installed = "✓",
                     package_pending = "➜",
-                    package_uninstalled = "✗"
-                }
-            }
-        }
+                    package_uninstalled = "✗",
+                },
+            },
+        },
+    },
+
+    {
+        "mason-org/mason-lspconfig.nvim",
+        dependencies = {
+            "mason-org/mason.nvim",
+            "neovim/nvim-lspconfig",
+        },
+        opts = {
+            automatic_enable = true,
+        },
+    },
+
+    {
+        "neovim/nvim-lspconfig",
     },
 
     --LUALINE
