@@ -14,3 +14,4 @@ Theme: Tokyonight
 - Telescope
 - Lazy nvim
 - Which key
+- leetcode nvim
